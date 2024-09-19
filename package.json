@@ -1,0 +1,17 @@
+{
+  "name": "cartesi-chainlink",
+  "version": "1.0.0",
+  "description": "integration of Chainlink with Cartesi",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node compile.js",
+    "start": "node test.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ethers": "^5.7.2",
+    "solc": "^0.8.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
