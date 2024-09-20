@@ -1,0 +1,61 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+lerna-debug.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Dependency directories
+bower_components/
+jspm_packages/
+
+# Build output directories
+dist/
+build/
+
+# Python related (if applicable)
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+venv.bak/
+
+# Java related (if applicable)
+*.class
+*.jar
+*.war
+*.ear
+
+# Rust related (if applicable)
+target/
+
+# VSCode related
+.vscode/
+
+# macOS generated files
+*.DS_Store
+
+# Optional: Add specific project or language-related files that should not be tracked
+
+.env
