@@ -1,5 +1,6 @@
 const { ethers } = require("ethers");
 
+// Function to convert hex to string
 function hexToStr(hexData) {
   try {
     // Convert hex to string using ethers.js' utility
@@ -10,13 +11,20 @@ function hexToStr(hexData) {
   }
 }
 
+// Read contract address from terminal arguments
+const contractAddress =
+  process.argv[2] || "0xAf4c22EF6e054Eed49d905AB3198b78b8B4580b8"; // Default if no address provided
+
+// Ensure the contract address is valid
+if (!ethers.utils.isAddress(contractAddress)) {
+  console.error("Invalid contract address provided.");
+  process.exit(1);
+}
+
 // Define provider (e.g., Sepolia testnet)
 const provider = new ethers.providers.JsonRpcProvider(
   "https://rpc2.sepolia.org"
 );
-
-// Contract address you want to listen to (your InputAutomation contract)
-const contractAddress = "0xAf4c22EF6e054Eed49d905AB3198b78b8B4580b8"; // Replace with your actual contract address
 
 // ABI definition including the Bumped event
 const contractABI = [
@@ -39,18 +47,10 @@ contract.on(
     timestamp,
     inputData
   ) => {
-    // console.log("Bumped event detected:");
-    // console.log(`Log Sender: ${logSender}`);
-    // console.log(`Caller: ${caller}`);
-    // console.log(`Number: ${number}`);
-    // console.log(`Block Number: ${blockNumber}`);
     console.log(`Input of number: ${newCounterValue}`);
-    // console.log(`Transaction Hash: ${txnHash}`);
-    // console.log(`Timestamp: ${timestamp}`);
-
     console.log(`Input Data: ${inputData}`);
 
-    //get only the last 32 bytes of the inputData and print as string
+    // Get only the last 32 bytes of the inputData and print as string
     let data = inputData.slice(-64);
     console.log(`Input Data as string: ${hexToStr("0x" + data)}`);
   }

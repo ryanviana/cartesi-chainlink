@@ -118,7 +118,7 @@ async function sendLinkWithRegisterData(
 // Execute the function with appropriate values
 sendLinkWithRegisterData(
   "https://rpc2.sepolia.org", // Infura or another provider URL
-  "0x7fc118ff40c94cb1a8590fd7fd2830b06a65c5fbc4c936d35619495ceec88dbe", // Your private key
+  "30a2397f8fb55ee9577fb0ccfa0f93d35ed3de71cf1f588786f107dd360b1c08", // Your private key
   "0x779877A7B0D9E8603169DdbD7836e478b4624789", // Sepolia LinkToken address
   "0xb0e49c5d0d05cbc241d68c05bc5ba1d1b7b72976", // Your AutomationRegistrar2_1 contract address
   "0xAf4c22EF6e054Eed49d905AB3198b78b8B4580b8", // Your upkeep contract address
