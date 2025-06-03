@@ -1,0 +1,24 @@
+const { ethers } = require("ethers");
+
+const DEFAULT_PROVIDER_URL = "https://rpc2.sepolia.org";
+const DEFAULT_LINK_TOKEN_ADDRESS = "0x779877A7B0D9E8603169DdbD7836e478b4624789";
+const DEFAULT_AUTOMATION_REGISTRAR_ADDRESS = "0xb0e49c5d0d05cbc241d68c05bc5ba1d1b7b72976";
+const DEFAULT_REGISTRATION_AMOUNT_LINK = ethers.utils.parseUnits("2", 18); // 2 LINK
+const DEFAULT_UPKEEP_GAS_LIMIT = 200000;
+const DEFAULT_ENCRYPTED_EMAIL = ethers.utils.hexlify(ethers.utils.toUtf8Bytes(""));
+const DEFAULT_CHECK_DATA = ethers.utils.hexlify(ethers.utils.toUtf8Bytes(""));
+const DEFAULT_OFFCHAIN_CONFIG = ethers.utils.hexlify(ethers.utils.toUtf8Bytes(""));
+const DEFAULT_UPKEEP_NAME = "DEFAULT";
+
+
+module.exports = {
+  DEFAULT_PROVIDER_URL,
+  DEFAULT_LINK_TOKEN_ADDRESS,
+  DEFAULT_AUTOMATION_REGISTRAR_ADDRESS,
+  DEFAULT_REGISTRATION_AMOUNT_LINK,
+  DEFAULT_UPKEEP_GAS_LIMIT,
+  DEFAULT_ENCRYPTED_EMAIL,
+  DEFAULT_CHECK_DATA,
+  DEFAULT_OFFCHAIN_CONFIG,
+  DEFAULT_UPKEEP_NAME,
+}; 

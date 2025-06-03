@@ -1,17 +1,24 @@
 {
-  "name": "cartesi-chainlink",
-  "version": "1.0.0",
-  "description": "integration of Chainlink with Cartesi",
-  "main": "index.js",
+  "name": "cartesi-chainlink-automation-lib",
+  "version": "0.1.0",
+  "description": "A library to interact with Chainlink Automation, tailored for Cartesi projects.",
+  "main": "src/index.js",
   "scripts": {
-    "compile": "node compile.js",
-    "start": "node test.js"
+    "compile": "node scripts/compile.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "dotenv": "^16.4.5",
-    "ethers": "^5.7.2",
-    "solc": "^0.8.0"
-  },
+  "keywords": [
+    "cartesi",
+    "chainlink",
+    "automation",
+    "ethereum"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^5.7.2" 
+  },
+  "devDependencies": {
+    "solc": "^0.8.0"
+  }
 }
