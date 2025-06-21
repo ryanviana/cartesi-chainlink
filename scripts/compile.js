@@ -37,9 +37,9 @@ function compileContract(contractFileName) {
   if (output.errors) {
     const errors = output.errors.filter((error) => error.severity === "error");
     if (errors.length > 0) {
-      errors.forEach((err) => {
-        console.error(err.formattedMessage);
-      });
+    errors.forEach((err) => {
+      console.error(err.formattedMessage);
+    });
       throw new Error("Compilation failed with errors.");
     } else {
       // Log warnings if any

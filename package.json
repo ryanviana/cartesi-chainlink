@@ -1,24 +1,41 @@
 {
-  "name": "cartesi-chainlink-automation-lib",
-  "version": "0.1.0",
-  "description": "A library to interact with Chainlink Automation, tailored for Cartesi projects.",
-  "main": "src/index.js",
+  "name": "cartesi-chainlink-automation",
+  "version": "1.0.0",
+  "description": "A library to simplify Chainlink Automation registration for Cartesi DApps.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "tsc",
     "compile": "node scripts/compile.js",
+    "prepublishOnly": "npm run build",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "cartesi",
     "chainlink",
     "automation",
-    "ethereum"
+    "ethereum",
+    "typescript",
+    "web3"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
-    "ethers": "^5.7.2" 
+    "ethers": "^5.7.2"
   },
   "devDependencies": {
-    "solc": "^0.8.0"
+    "typescript": "^5.0.0",
+    "solc": "^0.8.0",
+    "@types/node": "^20.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
